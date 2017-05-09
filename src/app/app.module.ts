@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { MdButtonModule, MdCheckboxModule, } from '@angular/material';
+
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SecondComponent } from './components/second/second.component';
@@ -17,7 +20,8 @@ const appRoutes: Routes = [
     component: FirstComponent,
     data: { title: 'Heroes List' }
   },
-  { path: '',
+  {
+    path: '',
     redirectTo: '/ulink1',
     pathMatch: 'full'
   },
@@ -35,7 +39,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MdButtonModule, MdCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
